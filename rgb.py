@@ -31,6 +31,9 @@ for i in range(5120):
         R = PIXEL[i, j][0] - PIXEL2[i, j][0]
         G = PIXEL[i, j][1] - PIXEL2[i, j][1]
         B = PIXEL[i, j][2] - PIXEL2[i, j][2]
-        PIXEL3[i, j] = (R, G, B)
+        if R == 0 and G == 0 and B == 0:
+            PIXEL3[i, j] = (255, 255, 255)
+        else:
+            PIXEL3[i, j] = (R, G, B)
 
 IMAGE3.save('image3.jpg')
