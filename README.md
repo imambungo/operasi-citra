@@ -167,7 +167,7 @@ CITRA.save('gambar_negatif.jpg')
 Masih menggunakan gambar yang sama, berikut hasil gambar setelah dilakukan operasi citra negatif:
 ![](img/gambar_negatif.jpg)
 
-### Citra Pencerahan
+### Pencerahan Citra
 
 untuk operasi pencerahan citra, berikut programnya:
 
