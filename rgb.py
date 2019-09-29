@@ -2,9 +2,11 @@
 
 from PIL import Image
 
-IMAGE = Image.open('sample.jpg')
+IMAGE = Image.open('gambar1.jpg')
 PIXEL = IMAGE.load()
 print(IMAGE.size)
+print(IMAGE.size[0])  # ukuran horizontal
+print(IMAGE.size[1])
 print(PIXEL[3, 8])
 print(PIXEL[3, 8][0])
 print(PIXEL[3, 8][1])
@@ -16,7 +18,7 @@ for i in range(2500):
         PIXEL[i, j] = (23, 83, 123)
 
 IMAGE.save('sample2.jpg')
-IMAGE = Image.open('sample.jpg')
+IMAGE = Image.open('gambar1.jpg')
 PIXEL = IMAGE.load()
 
 IMAGE2 = Image.open('sample2.jpg')
