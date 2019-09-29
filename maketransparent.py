@@ -1,3 +1,5 @@
+# https://stackoverflow.com/a/765774/9157799
+
 from PIL import Image
 
 img = Image.open('image3.jpg')
