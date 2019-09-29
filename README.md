@@ -139,3 +139,30 @@ Setelah dilakukan operasi citra biner dengan batas ambang 200:
 
 Setelah dilakukan operasi citra biner dengan batas ambang 230:
 ![](img/gambar_biner_230.jpg)
+
+### Citra Negatif
+
+untuk membuat citra negatif, berikut programnya:
+
+```python
+from PIL import Image
+
+CITRA = Image.open('gambar.jpg')
+
+ukuran_horizontal = CITRA.size[0]
+ukuran_vertikal = CITRA.size[1]
+
+PIXEL = CITRA.load()
+
+for x in range(ukuran_horizontal):
+    for y in range(ukuran_vertikal):
+        R = 255 - PIXEL[x, y][0]
+        G = 255 - PIXEL[x, y][1]
+        B = 255 - PIXEL[x, y][2]
+        PIXEL[x, y] = (R, G, B)
+
+CITRA.save('gambar_negatif.jpg')
+```
+
+Masih menggunakan gambar yang sama, berikut hasil gambar setelah dilakukan operasi citra negatif:
+![](img/gambar_negatif.jpg)
