@@ -378,3 +378,8 @@ dilakukan operasi pengurangan dengan gambar yang berbeda:
 didapat hasil perbedaannya berikut ini:
 
 ![](img/gambar_perbedaan.jpg)
+
+---
+
+Semua source code dan gambar di atas dapat dilihat di link berikut:
+http://bit.ly/operasicitra
