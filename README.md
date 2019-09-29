@@ -5,6 +5,9 @@ Anggota:
 - Farhan Furqan (09021281722045)
 - M Imam Pratama (09021281722063)
 
+Semua source code dan gambar di bawah dapat dilihat di link berikut:
+http://bit.ly/operasicitra
+
 ## Dasar Pengoperasian Citra pada Python 3
 
 Untuk implementasi operasi-operasi citra pada program, kami menggunakan bahasa
@@ -494,8 +497,3 @@ dilakukan operasi pengurangan dengan gambar yang berbeda:
 didapat hasil perbedaannya berikut ini:
 
 ![](img/gambar_perbedaan.jpg)
-
----
-
-Semua source code dan gambar di atas dapat dilihat di link berikut:
-http://bit.ly/operasicitra
