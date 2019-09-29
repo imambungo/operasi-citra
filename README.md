@@ -202,12 +202,12 @@ atur_pencerahan(80, 'gambar_dicerahkan.jpg')
 atur_pencerahan(-80, 'gambar_digelapkan.jpg')
 ```
 
-Gambar yang sama, berikut hasil gambar setelah dilakukan operasi citra pencerahan;
+Gambar yang sama, berikut hasil gambar setelah dilakukan operasi pencerahan citra;
 
-Dengan intensitas +50:
+Dengan intensitas +80:
 
 ![](img/gambar_dicerahkan.jpg)
 
-Dengan intensitas -50:
+Dengan intensitas -80:
 
 ![](img/gambar_digelapkan.jpg)
