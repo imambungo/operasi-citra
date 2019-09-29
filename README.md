@@ -48,11 +48,18 @@ Berikut contoh outputnya:
 2880
 ```
 
+Untuk mengkonversi suatu citra RGB ke grayscale, berikut caranya:
+
+```python
+# sumber: https://stackoverflow.com/a/18778280/9157799
+CITRA_GRAYSCALE = Image.open('gambar1.jpg').convert('L')
+```
+
 Jika kita telah selesai melakukan operasi-operasi terhadap suatu citra, kita
 perlu menyimpan hasil pengolahan citranya dengan cara berikut:
 
 ```python
-CITRA.save('gambar2.jpg')
+CITRA_GRAYSCALE.save('gambar2.jpg')
 ```
 
 ## Operasi pada aras titik
@@ -72,4 +79,14 @@ Dan berikut cara mengubah RGB dari suatu pixel:
 
 ```python
 PIXEL[3, 8] = (0, 0, 0)  # mengubah pixel (3, 8) menjadi warna hitam
+```
+
+Untuk citra grayscale, berikut caranya:
+
+```python
+# jangan lupa akses pixel dari citra grayscale
+PIXEL_GRAYSCALE = CITRA_GRAYSCALE.load()
+
+PIXEL_GRAYSCALE[3, 8] = 128
+print(PIXEL_GRAYSCALE[3, 8])
 ```
