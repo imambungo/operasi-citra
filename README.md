@@ -49,3 +49,20 @@ Berikut contoh outputnya:
 ```
 
 ## Operasi pada aras titik
+
+Berikut cara mengakses pixel dan nilai RGB dari suatu citra:
+
+```python
+x = 3
+y = 8
+print(PIXEL[x, y])   # nilai RGB dari pixel (x, y)
+print(PIXEL[x, y][0])  # nilai R dari pixel (x, y)
+print(PIXEL[x, y][1])  # nilai G dari pixel (x, y)
+print(PIXEL[x, y][2])  # nilai B dari pixel (x, y)
+```
+
+Dan berikut cara mengubah RGB dari suatu pixel:
+
+```python
+PIXEL[3, 8] = (0, 0, 0)  # mengubah pixel (3, 8) menjadi warna hitam
+```
