@@ -1,49 +1,28 @@
 from PIL import Image
 
-# konversi gambar RGB ke Pencerahan
+def clipping(intensitas):
+    if intensitas < 0:
+        return 0
+    if intensitas > 255:
+        return 255
+    return intensitas
 
-CITRA = Image.open('gambar.jpg')
+def atur_pencerahan(nilai_pencerahan, nama_setelah_disave):
+    CITRA = Image.open('gambar.jpg')
+    PIXEL = CITRA.load()
 
-ukuran_horizontal = CITRA.size[0]
-ukuran_vertikal = CITRA.size[1]
+    ukuran_horizontal = CITRA.size[0]
+    ukuran_vertikal = CITRA.size[1]
 
-PIXEL = CITRA.load()
-temp = 30
-for x in range(ukuran_horizontal):
-    for y in range(ukuran_vertikal):
+    for x in range(ukuran_horizontal):
+        for y in range(ukuran_vertikal):
+            R = clipping(PIXEL[x, y][0] + nilai_pencerahan)
+            G = clipping(PIXEL[x, y][1] + nilai_pencerahan)
+            B = clipping(PIXEL[x, y][2] + nilai_pencerahan)
+            PIXEL[x, y] = (R, G, B)
 
-        R = PIXEL[x, y][0] + temp
-        if R < 0:
-                R = 0
-            
-        else:
-            if R > 255:
-                R = 255
-        
-            else:
-                R = R
-        G = PIXEL[x, y][1] + temp
-        if G < 0:
-                G = 0
-            
-        else:
-            if G > 255:
-                G = 255
-        
-            else:
-                G = G
-        B = PIXEL[x, y][2] + temp
-        if B < 0:
-                B = 0
-            
-        else:
-            if B > 255:
-                B = 255
-        
-            else:
-                B = B
-        
-        PIXEL[x, y] = (R, G, B)
+    CITRA.save(nama_setelah_disave)
 
-CITRA.save('gambar_pencerahan.jpg')
 
+atur_pencerahan(80, 'gambar_dicerahkan.jpg')
+atur_pencerahan(-80, 'gambar_digelapkan.jpg')
