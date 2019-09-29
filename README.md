@@ -276,5 +276,49 @@ Berikut hasil setelah di Rotasi 90°:
 Berikut hasil setelah di Rotasi 180°:
 ![](img/gambar_rotasi_180.jpg)
 
+### Translasi Citra
 
+Berikut implementasi translasi citra dalam python:
 
+```python
+from PIL import Image
+def translasi(m, n):
+    CITRA = Image.open('gambar.jpg')
+    PIXEL = CITRA.load()
+
+    ukuran_horizontal = CITRA.size[0]
+    ukuran_vertikal = CITRA.size[1]
+
+    CITRA_BARU = Image.new("RGB", (ukuran_horizontal, ukuran_vertikal))
+    PIXEL_BARU = CITRA_BARU.load()
+
+    start_m = m
+    start_n = n
+
+    if m < 0:
+        start_m = 0
+    if n < 0:
+        start_n = 0
+
+    for x in range(start_m, ukuran_horizontal):
+        for y in range(start_n, ukuran_vertikal):
+            x_baru = x - m
+            y_baru = y - n
+       
+            if (x_baru >= ukuran_horizontal or y_baru >= ukuran_vertikal or x_baru < 0 or y_baru < 0):
+                PIXEL_BARU[x, y] = (0, 0, 0)
+            else:
+                PIXEL_BARU[x, y]= PIXEL[x_baru, y_baru]
+
+    nama_setelah_disave = 'gambar_translasi_' + str(m) + '_' + str(n) +'.jpg'
+    CITRA_BARU.save(nama_setelah_disave)
+
+translasi(200, 500)
+translasi(-200, -500)
+```
+
+Berikut hasil translasi(200, 500):
+![](img/gambar_translasi_200_500.jpg)
+
+Berikut hasil translasi(-200, -500):
+![](img/gambar_translasi_-200_-500.jpg)
