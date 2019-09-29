@@ -6,11 +6,11 @@ def rotasi(derajat):
     CITRA = Image.open('gambar.jpg')
     PIXEL = CITRA.load()
 
-    CITRA_BARU = Image.open('gambar.jpg')
-    PIXEL_BARU = CITRA_BARU.load()
-
     ukuran_horizontal = CITRA.size[0]
     ukuran_vertikal = CITRA.size[1]
+
+    CITRA_BARU = Image.new("RGB", (ukuran_horizontal, ukuran_vertikal))
+    PIXEL_BARU = CITRA_BARU.load()
 
     x_tengah = ukuran_horizontal // 2
     y_tengah = ukuran_vertikal // 2
