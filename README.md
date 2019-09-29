@@ -27,7 +27,7 @@ Sebelum melakukan operasi terhadap citra digital, kita harus mengaksesnya dulu
 seperti berikut:
 
 ```python
-CITRA = Image.open('gambar1.jpg')
+CITRA = Image.open('gambar.jpg')
 PIXEL = CITRA.load()
 ```
 
@@ -52,7 +52,7 @@ Untuk mengkonversi suatu citra RGB ke grayscale, berikut caranya:
 
 ```python
 # sumber: https://stackoverflow.com/a/18778280/9157799
-CITRA_GRAYSCALE = Image.open('gambar1.jpg').convert('L')
+CITRA_GRAYSCALE = Image.open('gambar.jpg').convert('L')
 ```
 
 Jika kita telah selesai melakukan operasi-operasi terhadap suatu citra, kita

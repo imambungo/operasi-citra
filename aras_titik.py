@@ -1,6 +1,6 @@
 from PIL import Image
 
-CITRA = Image.open('gambar1.jpg')
+CITRA = Image.open('gambar.jpg')
 PIXEL = CITRA.load()
 
 # cara mengakses aras titik
