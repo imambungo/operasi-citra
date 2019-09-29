@@ -48,6 +48,13 @@ Berikut contoh outputnya:
 2880
 ```
 
+Jika kita telah selesai melakukan operasi-operasi terhadap suatu citra, kita
+perlu menyimpan hasil pengolahan citranya dengan cara berikut:
+
+```python
+CITRA.save('gambar2.jpg')
+```
+
 ## Operasi pada aras titik
 
 Berikut cara mengakses pixel dan nilai RGB dari suatu citra:
