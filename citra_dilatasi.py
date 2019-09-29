@@ -2,7 +2,7 @@ from PIL import Image
 from math import floor
 
 def skala(s):
-    CITRA = Image.open('gambar.jpg')
+    CITRA = Image.open('gambar2.jpg')
     PIXEL = CITRA.load()
 
     ukuran_horizontal = CITRA.size[0]
@@ -20,8 +20,9 @@ def skala(s):
             y_lama = ukuran_vertikal * y / ukuran_vertikal_baru
             PIXEL_BARU[x, y] = PIXEL[x_lama, y_lama]
 
-    nama_setelah_disave = 'gambar_dilatasi_skala_' + str(s).replace('.', ',') +'.jpg'
+    nama_setelah_disave = 'gambar_dilatasi_skala_' + str(s).replace('.', ',') + '.jpg'
     CITRA_BARU.save(nama_setelah_disave)
 
-skala(0.5)
-skala(2)
+
+skala(0.7)
+skala(1.6)
