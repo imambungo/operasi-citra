@@ -1,7 +1,5 @@
 from PIL import Image
 
-# konversi gambar RGB ke Negatif
-
 CITRA = Image.open('gambar.jpg')
 
 ukuran_horizontal = CITRA.size[0]
@@ -17,4 +15,3 @@ for x in range(ukuran_horizontal):
         PIXEL[x, y] = (R, G, B)
 
 CITRA.save('gambar_negatif.jpg')
-
